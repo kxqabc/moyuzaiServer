@@ -11,5 +11,9 @@ public interface UserDao {
 
     User queryById(long id);
 
+    User queryByMobile(String mobile);
+
     List<User> queryAll();
+
+
 }

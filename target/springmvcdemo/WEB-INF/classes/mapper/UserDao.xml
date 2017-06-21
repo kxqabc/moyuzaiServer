@@ -6,7 +6,12 @@
     <!-- 目的：为dao接口方法提供sql语句配置 -->
     <select id="queryById"  parameterType="long" resultType="User">
         <!-- 具体的sql -->
-        SELECT * FROM users WHERE id = #{id}
+        SELECT id,userName,mobile FROM users WHERE id = #{id}
+    </select>
+
+    <select id="queryByMobile"  parameterType="String" resultType="User">
+        <!-- 具体的sql -->
+        SELECT * FROM users WHERE mobile = #{mobile}
     </select>
 
     <select id="queryAll" resultMap="userList">
