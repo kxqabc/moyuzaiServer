@@ -18,13 +18,9 @@
         SELECT * FROM users ORDER BY id
     </select>
 
-    <!--<update id="reduceNumber">-->
-        <!--UPDATE book-->
-        <!--SET number = number - 1-->
-        <!--WHERE-->
-        <!--book_id = #{bookId}-->
-        <!--AND number > 0-->
-    <!--</update>-->
+    <update id="updateByMobile" parameterType="String" useGeneratedKeys="true" keyProperty="mobile.id">
+        UPDATE users SET password = newPassword WHERE mobile = #{mobile}
+    </update>
 
     <!--resultMap-->
     <resultMap id="userList" type="User">

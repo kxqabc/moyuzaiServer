@@ -6,9 +6,19 @@ package com.moyuzai.servlet.dto;
 public class BaseResponse<T> {
     protected boolean state;
     protected T data;
-    protected String errorInfo;
+    protected String stateInfo;
 
     public BaseResponse() {
+    }
+
+    public BaseResponse(boolean state, T data) {
+        this.state = state;
+        this.data = data;
+    }
+
+    public BaseResponse(boolean state, String errorInfo) {
+        this.state = state;
+        this.stateInfo = errorInfo;
     }
 
     public boolean isState() {
@@ -27,11 +37,11 @@ public class BaseResponse<T> {
         this.data = data;
     }
 
-    public String getErrorInfo() {
-        return errorInfo;
+    public String getStateInfo() {
+        return stateInfo;
     }
 
-    public void setErrorInfo(String errorInfo) {
-        this.errorInfo = errorInfo;
+    public void setStateInfo(String stateInfo) {
+        this.stateInfo = stateInfo;
     }
 }

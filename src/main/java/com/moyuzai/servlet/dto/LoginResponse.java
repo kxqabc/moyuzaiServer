@@ -19,6 +19,6 @@ public class LoginResponse extends BaseResponse {
     /**失败返回的信息*/
     public LoginResponse(boolean stateIn, LoginStateEnum loginStateEnum) {
         state = stateIn;
-        errorInfo = loginStateEnum.getStateInfo();
+        stateInfo = loginStateEnum.getStateInfo();
     }
 }

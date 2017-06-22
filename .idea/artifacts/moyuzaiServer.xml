@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="springmvcdemo:war exploded">
-    <output-path>$PROJECT_DIR$/target/springmvcdemo</output-path>
+  <artifact type="exploded-war" name="moyuzaiServer">
+    <output-path>$PROJECT_DIR$/classes/artifacts/moyuzaiServer</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -40,9 +40,6 @@
           <element id="library" level="project" name="Maven: com.dyuproject.protostuff:protostuff-collectionschema:1.0.8" />
           <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2" />
         </element>
-      </element>
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/springmvcdemo/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="springmvcdemo/web/Web" />
     </root>

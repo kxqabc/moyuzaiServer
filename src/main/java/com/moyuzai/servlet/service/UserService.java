@@ -1,6 +1,9 @@
 package com.moyuzai.servlet.service;
 
+import com.moyuzai.servlet.dto.UsersResponse;
 import com.moyuzai.servlet.entity.User;
+import com.moyuzai.servlet.enums.UsersEnum;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -14,5 +17,7 @@ public interface UserService {
     User getUserByMobile(String mobile);
 
     List<User> getAllUsers();
+
+    UsersEnum updatePasswordByMobile(String mobile, String newPassword);
 
 }
